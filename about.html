@@ -427,53 +427,27 @@
     const hamburger = document.querySelector(".hamburger");
     const navLinks = document.querySelector(".navbar-links");
     const dropdowns = document.querySelectorAll(".navbar-links > li > a");
-    const pagesLink = document.querySelector(".pages-link");
-  
+    const pagesLink = document.querySelector(".navbar-links > li > a[href='#']");
+    
     hamburger.addEventListener("click", () => {
       hamburger.classList.toggle("active");
       navLinks.classList.toggle("active");
     });
-  
-    dropdowns.forEach(dropdown => {
+    
+    dropdowns.forEach((dropdown) => {
       dropdown.addEventListener("click", (e) => {
-        if (window.innerWidth <= 768) {
-          const submenu = dropdown.nextElementSibling;
-          if (submenu && submenu.classList.contains("dropdown")) {
-            e.preventDefault();
-            submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-          }
+        const submenu = dropdown.nextElementSibling;
+        if (submenu && submenu.classList.contains("dropdown")) {
+          e.preventDefault();
+          submenu.style.display = submenu.style.display === "block" ? "none" : "block";
         }
       });
     });
-  
-    pagesLink.addEventListener("click", (e) => {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        const dropdownMenu = pagesLink.nextElementSibling;
-        dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
-      }
-    });
-  
+    
     document.addEventListener("click", (e) => {
       if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
         navLinks.classList.remove("active");
         hamburger.classList.remove("active");
-        
-        // Close all dropdowns when clicking outside
-        const allDropdowns = document.querySelectorAll(".dropdown");
-        allDropdowns.forEach(dropdown => {
-          dropdown.style.display = "none";
-        });
-      }
-    });
-  
-    // Close dropdowns when resizing to desktop view
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > 768) {
-        const allDropdowns = document.querySelectorAll(".dropdown");
-        allDropdowns.forEach(dropdown => {
-          dropdown.style.display = "";
-        });
       }
     });
   </script>

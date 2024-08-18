@@ -129,11 +129,11 @@
           <p>info@discovermalaysia.com</p>
         </div>
         <div class="social-icons">
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.facebook.com/profile.php?id=61564218220680"><i class="fab fa-x-twitter"></i></a>
-          <a href="https://www.instagram.com/disc_overmalaysia/"><i class="fab fa-instagram"></i></a>
-          <a href="https://github.com/AMOLEDArekkusu"><i class="fab fa-github"></i></a>
-      </div>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=61564218220680"><i class="fab fa-x-twitter"></i></a>
+              <a href="https://www.instagram.com/disc_overmalaysia/"><i class="fab fa-instagram"></i></a>
+              <a href="https://github.com/AMOLEDArekkusu"><i class="fab fa-github"></i></a>
+          </div>
       </div>
     </div>
     <div class="footer-bottom">
@@ -143,10 +143,10 @@
 
 
   <script>
-    const hamburger = document.querySelector(".hamburger");
+     const hamburger = document.querySelector(".hamburger");
     const navLinks = document.querySelector(".navbar-links");
     const dropdowns = document.querySelectorAll(".navbar-links > li > a");
-    const pagesLink = document.querySelector(".pages-link");
+    const pagesLink = document.querySelector(".navbar-links > li > a[href='#']");
     const scrollButton = document.getElementById("scroll-button");
     const container1 = document.getElementById("container1");
   
@@ -154,38 +154,24 @@
       hamburger.classList.toggle("active");
       navLinks.classList.toggle("active");
     });
-  
-    dropdowns.forEach(dropdown => {
+    
+    dropdowns.forEach((dropdown) => {
       dropdown.addEventListener("click", (e) => {
-        if (window.innerWidth <= 768 && !dropdown.classList.contains("pages-link")) {
+        const submenu = dropdown.nextElementSibling;
+        if (submenu && submenu.classList.contains("dropdown")) {
           e.preventDefault();
-          const submenu = dropdown.nextElementSibling;
-          if (submenu && submenu.classList.contains("dropdown")) {
-            submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-          }
+          submenu.style.display = submenu.style.display === "block" ? "none" : "block";
         }
       });
     });
-  
-    pagesLink.addEventListener("click", (e) => {
-      if (window.innerWidth <= 768) {
-        e.preventDefault();
-        const dropdownMenu = pagesLink.nextElementSibling;
-        dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
-      }
-    });
-  
+
     document.addEventListener("click", (e) => {
       if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
         navLinks.classList.remove("active");
         hamburger.classList.remove("active");
-        
-        const allDropdowns = document.querySelectorAll(".dropdown");
-        allDropdowns.forEach(dropdown => {
-          dropdown.style.display = "none";
-        });
       }
     });
+        
 
     window.addEventListener("resize", () => {
       if (window.innerWidth > 768) {
