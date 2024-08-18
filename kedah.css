@@ -25,13 +25,15 @@ body {
 }
 
 .header {
-  background-color: #007bff;
-  color: white;
+  background-image: url('image/sungai-jagong-kedah-malaysia.jpg');
+  color: rgb(140, 137, 137);
   text-align: center;
+  border: #0f1016;
   padding: 4rem 0;
   margin-bottom: 2rem;
   animation: fadeInDown 1s ease-out;
   margin-top: 60px;
+
 }
 
 .header h1 {
