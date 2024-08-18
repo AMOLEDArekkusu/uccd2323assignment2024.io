@@ -1,4 +1,3 @@
-
 function setCookie(name, value, days) {
     const d = new Date();
     d.setTime(d.getTime() + (days*24*60*60*1000));
@@ -26,11 +25,9 @@ function getCookie(name) {
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault(); 
 
-
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
-
 
     setCookie("name", name, 7);  
     setCookie("email", email, 7);
