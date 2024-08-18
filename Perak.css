@@ -114,7 +114,7 @@ nav {
 }
 
 .header {
-    background-image: linear-gradient(rgba(20, 20, 31, 0.5), rgba(20, 20, 31, 0.5)), url('fujiwara\ taufa-2.jpg');
+    background-image: linear-gradient(rgba(20, 20, 31, 0.5), rgba(20, 20, 31, 0.5)), url('Ipoh and KL/Ipoh/fujiwara taufa-2.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -320,6 +320,7 @@ nav {
 
   .header h1 {
     font-size: 2rem;
+
   }
 
   .hamburger {
