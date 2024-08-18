@@ -296,6 +296,11 @@ nav {
     font-size: 2rem;
   }
 
+  .intro
+  {
+    text-align: justify;
+  }
+
   .hamburger {
     display: block;
   }
