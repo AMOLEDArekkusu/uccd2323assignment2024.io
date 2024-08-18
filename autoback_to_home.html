@@ -14,7 +14,8 @@
             margin: 0;
             background-image: url('image/wp1842882-malaysia-wallpapers.jpg');
             background-repeat: no-repeat;
-            background-attachment: fixed;
+            background-position: center center;
+            background-size: cover;
         }
         .container {
             text-align: center;
@@ -37,7 +38,7 @@
         <h1>Thank You for Contacting Us</h1>
         <p>Your message has been received. We'll get back to you soon.</p>
         <p>You will be redirected to the homepage in <span id="countdown">5</span> seconds.</p>
-        <p>If does not redirected automatic, click here to manually.</p>
+        <p>If does not redirected automatic, click <a href="index.html"> here </a>to manually.</p>
     </div>
 
     <script>
@@ -49,7 +50,7 @@
             countdownElement.textContent = seconds;
             if (seconds <= 0) {
                 clearInterval(countdown);
-                window.location.href = 'home.html'; // Replace with your homepage URL
+                window.location.href = 'index.html'; // Replace with your homepage URL
             }
         }, 1000);
     </script>

@@ -112,8 +112,8 @@ nav {
 }
 
 .header {
-  background-image:linear-gradient(rgba(20, 20, 31, 0.5), rgba(20, 20, 31, 0.5)) url('Penang & Kedah/Penang 2nd Bridge/Depositphotos_363168442_L-728x546.jpg.webp');
-  color: white;
+  background-image:linear-gradient(rgba(20, 20, 31, 0.5), rgba(20, 20, 31, 0.5)), url('Penang & Kedah/Penang 2nd Bridge/p2b2.jpg');
+  color: rgb(182, 182, 182);
   text-align: center;
   padding: 4rem 0;
   margin-bottom: 2rem;

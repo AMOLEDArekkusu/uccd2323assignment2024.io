@@ -25,15 +25,17 @@
                     <textarea id="message" name="message" required></textarea>
                 </div>
 
-                <div class="form-group">
+                <div id="myForm" action="your_server_endpoint" method="POST">
                     <div class="g-recaptcha" data-sitekey="6Ldn6CgqAAAAAJ4yaJUGa1M3wj05XgYk2Bh6cqGO"></div>
+                    <button type="submit" class="submit-btn">Send Message</button>
                 </div>
                 
-                <button type="submit" class="submit-btn">Send Message</button>
+                
             </form>
 
             <script src="javascript/google_recaptcha.js" ></script>
             <script src="javascript/contact.js"></script>
+            <script src="server/node.js"></script>
         </div>
       
         <div class="contact-info">
