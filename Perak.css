@@ -310,12 +310,43 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
+  .attraction_box img {
+    height: 250px; 
+}
+
+.overlay h2 {
+    margin-top: 50%; 
+    font-size: 20px; 
+}
+
+.overlay {
+    font-size: 12px; 
+    padding: 0 20px;
+}
+
+.attraction_box {
+    animation: fadeInUp 1.5s ease-out; 
+}
+
+.header {
+    padding: 3rem 0; 
+    margin-top: 60px;
+}
+
+.header h1 {
+    font-size: 1.8rem; 
+}
+
+.attraction_box_area {
+    grid-template-columns: 1fr; 
+    flex-basis: 100%;
+}
+
+.intro {
+    padding: 0 20px; 
+}
   .attraction_wrapper {
     flex-direction: column;
-  }
-
-  .attraction_box_area {
-    flex-basis: 100%;
   }
 
   .header h1 {
@@ -448,3 +479,30 @@ nav {
     text-align: justify;
   }
 
+  @media screen and (max-width: 480px) {
+    .attraction_box img {
+        height: 400px; 
+    }
+
+    .overlay h2 {
+        margin-top: 30%; 
+        font-size: 18px; 
+    }
+
+    .overlay {
+        font-size: 12px;
+        padding: 0 20px; 
+    }
+
+    .header h1 {
+        font-size: 1.5rem; 
+    }
+
+    .map-icon {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 5px;
+      width: 30px; 
+      height: 30px;
+  }
+}
