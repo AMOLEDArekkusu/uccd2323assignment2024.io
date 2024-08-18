@@ -36,7 +36,6 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     setCookie("email", email, 7);
     setCookie("message", message, 7);
 
-    alert('Form data saved to cookies');
 });
 
 document.getElementById('name').value = getCookie("name") || "";
