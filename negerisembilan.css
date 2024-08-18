@@ -134,7 +134,8 @@ nav {
 }
 
 .intro {
-  text-align: center justify;
+  text-align: center ;
+  text-align: justify;
   margin-bottom: 2rem;
 }
 
