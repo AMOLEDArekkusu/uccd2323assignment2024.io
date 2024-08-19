@@ -11,7 +11,7 @@
     <div class="container">
         <h1 class="title">Contact Us</h1>
         <div class="contact-form">
-            <form id="contact-form" action="https://discovermalysiauccd2323.azurewebsites.net/submit-form" method="POST">
+            <form id="contact-form">
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -27,15 +27,10 @@
 
                 <div id="g-recaptcha" action="6LcfTScqAAAAAAktY2UREKh7i7pjlAbx0CX-ktI3" method="POST">
                     <div class="g-recaptcha" data-sitekey="6Ldn6CgqAAAAAJ4yaJUGa1M3wj05XgYk2Bh6cqGO"></div>
-                    
                 </div>
                 
                 <button type="submit" class="submit-btn">Send Message</button>
             </form>
-
-            <script src="javascript/google_recaptcha.js" ></script>
-            <script src="javascript/contact.js"></script>
-            <script src="javascript/localstoarge.js"></script>
         </div>
       
         <div class="contact-info">
@@ -46,11 +41,8 @@
         </div>
     </div>
 
-    <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault(); 
-
-        });
-    </script>
+    <script src="javascript/google_recaptcha.js"></script>
+    <script src="javascript/contact.js"></script>
+    <script src="javascript/contact-storage.js"></script>
 </body>
 </html>
