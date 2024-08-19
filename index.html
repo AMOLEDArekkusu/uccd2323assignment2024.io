@@ -141,6 +141,34 @@
     </div>
   </footer>
 
+  <div id="cookie-consent-box" class="cookie-consent-box">
+    <p>This website uses cookies to ensure you get the best experience on our website.</p>
+    <button id="accept-cookies">Accept</button>
+    <button id="decline-cookies">Decline</button>
+  </div>
+
+<script>
+  // Cookie Consent Box functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const cookieBox = document.getElementById('cookie-consent-box');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const declineBtn = document.getElementById('decline-cookies');
+
+    if (!localStorage.getItem('cookieConsent')) {
+      cookieBox.style.display = 'block';
+    }
+
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem('cookieConsent', 'accepted');
+      cookieBox.style.display = 'none';
+    });
+
+    declineBtn.addEventListener('click', () => {
+      localStorage.setItem('cookieConsent', 'declined');
+      cookieBox.style.display = 'none';
+    });
+  });
+</script>
 
   <script>
      const hamburger = document.querySelector(".hamburger");
